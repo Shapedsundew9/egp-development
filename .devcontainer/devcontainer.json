@@ -14,7 +14,7 @@
 	"forwardPorts": [5432],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "source setup.bash",
+	"postCreateCommand": "setup.bash",
 
 	// "customizations": {},
 
