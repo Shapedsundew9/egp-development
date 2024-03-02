@@ -11,12 +11,11 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// This can be used to network with other containers or the host.
-	// "forwardPorts": [5000, 5432],
+	"forwardPorts": [5432],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pip install --user -r requirements.txt",
+	"postCreateCommand": "source setup.bash",
 
-	// Configure tool-specific properties.
 	// "customizations": {},
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
@@ -27,7 +26,39 @@
 		"memory": "8gb",
 		"storage": "32gb"
 	 },
-	 "customizations": {
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"github.codespaces",
+				"github.copilot",
+				"ms-python.black-formatter",
+				"ms-python.isort",
+				"ms-python.pylint",
+				"ms-python.python",
+				"ms-python.vscode-pylance"
+			],
+			"settings": {
+				"editor.inlineSuggest.enabled": true,
+				"github.copilot.enable": {
+					"*": true,
+					"plaintext": false,
+					"markdown": false,
+					"scminput": false
+				},
+				"python.analysis.inlayHints.functionReturnTypes": true,
+				"python.analysis.inlayHints.variableTypes": true,
+				"python.analysis.typeCheckingMode": "basic",
+				"git.openRepositoryInParentFolders": "never",
+				"[python]": {
+					"editor.defaultFormatter": "ms-python.black-formatter"
+				},
+				"editor.minimap.renderCharacters": false,
+				"git.autofetch": true,
+				"git.enableSmartCommit": true
+			}
+		},
 		"codespaces": {
 		  "openFiles": [
 			"README.md"
@@ -35,3 +66,4 @@
 		}
 	  } 
 }
+
