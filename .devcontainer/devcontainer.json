@@ -14,7 +14,7 @@
 	"forwardPorts": [5432],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "setup.bash",
+	"postCreateCommand": "/workspaces/egp-development/setup.bash",
 
 	// "customizations": {},
 
