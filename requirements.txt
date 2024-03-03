@@ -3,11 +3,6 @@ numpy
 tqdm
 cerberus
 psycopg2
-matplotlib
-pycairo
-PyGObject
-bokeh
-networkx
 pympler 
 scipy
 exrex
